@@ -10,7 +10,7 @@ import requests
 import os 
 from together import Together
 
-model_name = os.path.join(os.environ['MODEL_PATH'], "BAAI/bge-base-en-v1.5")
+model_name = os.environ.get('MODEL_PATH', "BAAI/bge-base-en-v1.5")
 
 model = SentenceTransformer(model_name)
 
